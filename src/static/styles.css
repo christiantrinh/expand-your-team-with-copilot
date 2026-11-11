@@ -32,6 +32,25 @@
   --info-light: #d1ecf1;
 }
 
+body[data-theme="dark"] {
+  color-scheme: dark;
+  --primary: #7986cb;
+  --primary-light: #9fa8da;
+  --primary-dark: #3949ab;
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #eeeeee;
+  --text-secondary: #b0b0b0;
+  --border: #424242;
+  --border-light: #333333;
+  --border-focus: #666666;
+  --success: #81c784;
+  --success-light: #1b3320;
+  --warning-light: #3d3120;
+  --error-light: #3b2020;
+  --info-light: #173238;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -617,6 +636,8 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  gap: 6px;
 }
 
 #user-status {
@@ -652,6 +673,16 @@ footer {
 
 .user-icon {
   font-size: 1rem;
+}
+
+body[data-theme="dark"] input {
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+body[data-theme="dark"] .activity-tag {
+  background: #303f9f;
+  color: #e8eaf6;
 }
 
 #logout-button {
